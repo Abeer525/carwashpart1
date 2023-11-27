@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Reviews
   String _text = '';
   void updateText(String text) {
     setState(() {
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              // Reviews
+              // Reviews Section
               const SizedBox(height: 100),
               Text(
                 'Customer Reviews: $_text',
@@ -134,11 +133,11 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 5),
               const Text(
-                'For more info contact us: +961 xxx xxx', // Replace XXX with the actual place number
+                'For more info contact us: +961 xxx xxx',
                 style: TextStyle(fontSize: 16),
               ),
               const Text(
-                'Email: carwash@example.com', // Replace with the actual email
+                'Email: carwash@example.com',
                 style: TextStyle(fontSize: 16),
               ),
             ],
