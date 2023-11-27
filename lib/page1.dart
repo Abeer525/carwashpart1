@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: false,
         backgroundColor: Colors.black,
-        elevation: 0, // Remove app bar shadow
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.grey[300]!, // Light grey border
+                    color: Colors.grey[300]!,
                     width: 2.0,
                   ),
                   borderRadius: BorderRadius.circular(10.0),
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10), // Adjusted space between image and text
+              const SizedBox(height: 10),
               const Text(
                 'Welcome to Our Elegant Car Wash',
                 style: TextStyle(
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 10), // Adjusted space between text and button
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: openPage2,
                 style: ElevatedButton.styleFrom(
@@ -125,6 +125,21 @@ class _HomePageState extends State<HomePage> {
                     updateText(text);
                   },
                 ),
+              ),
+              const SizedBox(height: 90),
+              const Divider(
+                height: 20,
+                thickness: 2,
+                color: Colors.black,
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                'For more info contact us: +961 xxx xxx', // Replace XXX with the actual place number
+                style: TextStyle(fontSize: 16),
+              ),
+              const Text(
+                'Email: carwash@example.com', // Replace with the actual email
+                style: TextStyle(fontSize: 16),
               ),
             ],
           ),

@@ -58,7 +58,7 @@ class Page3 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-               Text(
+              Text(
                 'Welcome, $name!',
                 style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
@@ -79,16 +79,39 @@ class Page3 extends StatelessWidget {
                   style: const TextStyle(fontSize: 20),
                 ),
                 Text(
-                  'Car Price: \$${carPrice.toStringAsFixed(2)}',
-                  style: const TextStyle(fontSize: 20),
-                ),
-                Text(
                   'Wash Type: $washType',
                   style: const TextStyle(fontSize: 20),
                 ),
+                const SizedBox(height: 16),
+                Text(
+                  'Wash Price: \$${carPrice.toStringAsFixed(2)}',
+                  style: const TextStyle(fontSize: 30),
+                ),
+
               ],
+              const SizedBox(height: 150),
+              const Text(
+                'Thank you for your visit!',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 70),
+              const Divider(
+                height: 20,
+                thickness: 2,
+                color: Colors.black,
+              ),
+              const SizedBox(height: 8),
+              const Text(
+                'For more info contact us: +961 xxx xxx',
+                style: TextStyle(fontSize: 16),
+              ),
+              const Text(
+                'Email: carwash@example.com',
+                style: TextStyle(fontSize: 16),
+              ),
             ],
           ),
+
         ),
       ),
     );

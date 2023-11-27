@@ -1,4 +1,3 @@
-// 32130904 Eman Abdulkader & 32130947 Abeer Abou Soltaniyeh 
 import 'package:flutter/material.dart';
 import 'page3.dart';
 
@@ -112,19 +111,11 @@ class _Page2State extends State<Page2> {
   }
 
   void clearFields() {
-    setState(() {
-      _text = '';
-      _selectedDate = null;
-      _selectedTime = null;
-      _selectedCarType = carTypes[0];
-      _customerNumber = 1;
-    });
     nameController.clear();
     carTypeController.clear();
     washTypeController.clear();
     dateController.clear();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -226,6 +217,7 @@ class _Page2State extends State<Page2> {
                       ),
                     ),
                     const SizedBox(height: 10),
+
                     for (var carType in carTypes)
                       RadioListTile<Car>(
                         title: Text(carType.type),
@@ -237,6 +229,7 @@ class _Page2State extends State<Page2> {
                           });
                         },
                       ),
+
                     const SizedBox(height: 10),
                     const SizedBox(height: 10),
                     const Text(
@@ -275,10 +268,9 @@ class _Page2State extends State<Page2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(width: 10),
-                  const SizedBox(width: 10),
                   ElevatedButton(
                     onPressed: () {
+
                       clearFields();
                     },
                     style: ElevatedButton.styleFrom(
@@ -289,12 +281,11 @@ class _Page2State extends State<Page2> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    child: const Icon(
-                      Icons.delete,
+                    child:  const Icon(
+                      Icons.delete_forever,
                       color: Colors.white,
                     ),
                   ),
-
                   const SizedBox(width: 10),
                   ElevatedButton(
                     onPressed: () async {
