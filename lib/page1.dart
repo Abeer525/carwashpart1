@@ -1,6 +1,7 @@
 // 32130904 Eman Abdulkader & 32130947 Abeer Abou Soltaniyeh
 import 'package:flutter/material.dart';
 import 'page2.dart';
+import 'login.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,6 +15,14 @@ class _HomePageState extends State<HomePage> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const Page2(),
+      ),
+    );
+  }
+
+  void openLogin() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Login(),
       ),
     );
   }
@@ -99,9 +108,25 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 18),
                 ),
               ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: openLogin,
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  onPrimary: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: const Text(
+                  'Log In',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
 
               // Reviews Section
-              const SizedBox(height: 100),
+              const SizedBox(height: 80),
               Text(
                 'Customer Reviews: $_text',
                 style: const TextStyle(
@@ -125,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-              const SizedBox(height: 90),
+              const SizedBox(height: 60),
               const Divider(
                 height: 20,
                 thickness: 2,
@@ -133,11 +158,11 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 5),
               const Text(
-                'For more info contact us: +961 xxx xxx',
+                'For more info contact us: +961 111 111',
                 style: TextStyle(fontSize: 16),
               ),
               const Text(
-                'Email: carwash@example.com',
+                'Email: carwash@gmail.com',
                 style: TextStyle(fontSize: 16),
               ),
             ],

@@ -67,6 +67,8 @@ class Page3 extends StatelessWidget {
                 Text(
                   'Customer Number: $customerNumber',
                   style: const TextStyle(fontSize: 20),
+
+
                 ),
                 Text(
                   'Selected Date and Time:\n ${selectedDate!
